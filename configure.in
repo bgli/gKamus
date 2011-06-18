@@ -1,0 +1,38 @@
+dnl ===============================================================
+dnl gKamus configuration input, Ardhan Madras <ajwhb@knac.com>
+dnl Proses file ini dengan autoconf untuk output script configure.
+dnl ===============================================================
+
+AC_INIT([configure.in])
+AM_INIT_AUTOMAKE([gkamus], [1.0], [ajhwb@knac.com])
+AM_MAINTAINER_MODE
+
+AM_CONFIG_HEADER([config.h])
+
+AC_ISC_POSIX
+AC_PROG_CC
+AC_HEADER_STDC
+
+AM_PROG_CC_STDC
+AM_PROG_LIBTOOL
+
+PKG_CHECK_MODULES(PACKAGE, [gtk+-2.0 >= 2.18.9 glib-2.0 >= 2.22.5])
+AC_SUBST(PACKAGE_CFLAGS)
+AC_SUBST(PACKAGE_LIBS)
+
+if test "x${prefix}" = "xNONE"; then
+  packageprefix=${ac_default_prefix}
+else
+  packageprefix=${prefix}
+fi
+
+AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packageprefix}/share/${PACKAGE}", [Data directory])
+AC_DEFINE_UNQUOTED(PACKAGE_PIXMAPS_DIR, "${packageprefix}/share/pixmaps", [Pixmaps directory])
+AC_DEFINE_UNQUOTED(PACKAGE_DOC_DIR, "${packageprefix}/doc/${PACKAGE}", [Documentation directory])
+
+AC_OUTPUT([Makefile
+           gkamus.desktop
+           src/Makefile
+           pixmaps/Makefile
+           data/Makefile
+          ])

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=gKamus
+Comment=Simple English - Indonesian dictionary
+Exec=@prefix@/bin/gkamus
+Icon=@prefix@/share/pixmaps/gkamus.png
+Terminal=false
+Type=Application
+Categories=Application;Utility
+StartupNotify=true
+Terminal=false

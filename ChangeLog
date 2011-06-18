@@ -1,0 +1,29 @@
+Perubahan di 0.3:
+
+- Tidak menggunakan fungsi sortir untuk kolum kata (versi 0.1 dan 0.2), ini yang 
+  mengakibatkan pemasukan kata pada kolum menjadi sangat lambat pada GTK+ versi
+  2.10.14 ke atas karena sortir row yang sangat banyak
+- Tidak menggunakan libglade, glade telah direncanakan hanya untuk membuat
+  interface yang dapat dipanggil dengan GtkBuilder, libglade akan ditinggalkan
+- Pencarian otomatis kata yang dimasukkan pada entri (paling mendekati)
+- Memakai GTK+-2.12.8
+- Memakai libsexy untuk widget entry pencarian
+- Menambah Irregular Verbs (kata kerja tidak beraturan)
+- Perbaikan kode dan interfaces
+
+Perubahan di 0.2:
+
+- Menambahkan kamus Indonesia - Inggris (gkamus-id.dict)
+- Mulai versi 0.2, struktur data kamus menggunakan double linked list
+- Integrasi editor
+- Efisiensi pencarian dengan pencarian linear di double linked list
+- Efisiensi beberapa widget
+- Instalasi dan kompilasi standar GNU
+- Beberapa maintenance kode program
+
+Changes in 1.0
+- GTK+ 2.18.9
+- Disable dictionary editing
+- English localization
+- Leaving libsexy since GtkEntry's icon is builtin
+- Improved search algorithm
