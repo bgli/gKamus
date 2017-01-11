@@ -1,193 +1,197 @@
-    gKamus - Kamus Bahasa Inggris-Indonesia
+# gKamus - Kamus Bahasa Inggris-Indonesia
 
-    Version 1.0
+```
+Version 1.0
 
-    Copyright(c) 2008-2011 Ardhan Madras <ajhwb@knac.com>
+Copyright(c) 2008-2011 Ardhan Madras <ajhwb@knac.com>
+```
 
-    http://gkamus.sourceforge.net
+http://gkamus.sourceforge.net
 
-================================================================================
-TENTANG GKAMUS
 
-        gKamus adalah program sederhana Kamus Bahasa Inggris - Indonesia, 
-    dibuat karena rasa frutrasi saya dengan membuka-buka kamus edisi cetakan 
-    setiap kali membaca artikel, ebook, atau dokumen lainnya. Program kamus ada 
-    berapa yang tersedia seperti Gidic di Linux, atau program komersial Linguist 
-    di Windows, tetapi kadang kala kata yang dicari tidak terdapat dalam 
-    kamusnya, perlu penambahan kata, arti, dan lain-lain. Untuk memodifikasi 
-    file kamus, hanya penulisnya atau orang yang bisa membaca kode program yang 
-    dapat melakukan modifikasi dan menulis semacam editor, kadang mereka 
-    menggunakan format biner versi mereka sendiri untuk kamusnya yang tidak 
-    dapat dimodifikasi begitu saja, Anda memerlukan paling tidak semacam 
-    Hex Editor.
+## TENTANG GKAMUS
 
-        Lalu bagaimana dengan pengguna biasa?, yang tidak mengerti dengan bahasa 
-    pemrograman, bilangan hex atau biner? mereka tentu "tidak bisa" melakukan 
-    perubahan. Tidak ada gunanya membuat program yang bebas jika hanya 
-    Anda (penulis) yang dapat merubahnya. Kemudian saya menulis versi program 
-    kamus saya sendiri, mulanya sangat sederhana, untuk dijalankan di shell dan 
-    mencari kata yang cocok di file kamusnya lalu menampilkan artinya, file 
-    kamusnya berformat teks ASCII, editor untuk modikasi file kamus saya gunakan 
-    vim atau ed. Masalah yang dihadapi adalah bagaimana menulis setiap kata 
-    bahasa inggris dan definisinya, tidak mungkin untuk menulis semua kata dalam 
-    waktu yang singkat, untungnya Firmansyah pada halaman blognya ia telah 
-    mempunyai database kamus bahasa inggris yang menurut saya sudah termasuk 
-    lengkap (sekitar 23000 kata dan definisi). Lalu saya menanyakan bagaimana 
-    lisensi file miliknya itu, apakah tidak ada batasan untuk modifikasi dan 
-    distribusi ulang? Firmansyah menjawab dan memperbolehkan saya untuk 
-    menggunakan file-nya di aplikasi saya. Kemudian Firmansyah mengirimkan saya 
-    aplikasi GUI untuk kamusnya yang ia tulis dengan PHP-GTK, saya pun mulai 
-    menggunakan aplikasi itu di sistem saya. Namun kecepatan aplikasi itu masih 
-    lambat, walaupun dengan perubahan sana-sini aplikasi itu masih berjalan 
-    lambat. Saya akhirnya memutuskan untuk menulis GUI yang baru, yang cepat, 
-    dan bisa berjalan dimana saja (tanpa interpreter), lalu membuat editor untuk 
-    modifikasi kamus.
+    gKamus adalah program sederhana Kamus Bahasa Inggris - Indonesia, 
+dibuat karena rasa frutrasi saya dengan membuka-buka kamus edisi cetakan 
+setiap kali membaca artikel, ebook, atau dokumen lainnya. Program kamus ada 
+berapa yang tersedia seperti Gidic di Linux, atau program komersial Linguist 
+di Windows, tetapi kadang kala kata yang dicari tidak terdapat dalam 
+kamusnya, perlu penambahan kata, arti, dan lain-lain. Untuk memodifikasi 
+file kamus, hanya penulisnya atau orang yang bisa membaca kode program yang 
+dapat melakukan modifikasi dan menulis semacam editor, kadang mereka 
+menggunakan format biner versi mereka sendiri untuk kamusnya yang tidak 
+dapat dimodifikasi begitu saja, Anda memerlukan paling tidak semacam 
+Hex Editor.
 
-    Untuk membuat gKamus bisa digunakan di sistem operasi mana saja, gKamus 
-    harus ditulis dengan bahasa yang bisa berjalan di mana saja, dalam hal ini 
-    C dan GTK+. Pertama, C adalah bahasa semua sistem operasi, cepat dan sangat 
-    portable. Kedua, GTK+ saat ini sudah di implementasikan di banyak sistem 
-    operasi. Ketiga, mereka bebas, bukan gratis, tidak perduli dengan gratis 
-    atau tidak, yang penting library mereka tidak ada pembatasan sana-sini untuk 
-    distribusi ulang. Oke, cukup ngomongnya! 
+    Lalu bagaimana dengan pengguna biasa?, yang tidak mengerti dengan bahasa 
+pemrograman, bilangan hex atau biner? mereka tentu "tidak bisa" melakukan 
+perubahan. Tidak ada gunanya membuat program yang bebas jika hanya 
+Anda (penulis) yang dapat merubahnya. Kemudian saya menulis versi program 
+kamus saya sendiri, mulanya sangat sederhana, untuk dijalankan di shell dan 
+mencari kata yang cocok di file kamusnya lalu menampilkan artinya, file 
+kamusnya berformat teks ASCII, editor untuk modikasi file kamus saya gunakan 
+vim atau ed. Masalah yang dihadapi adalah bagaimana menulis setiap kata 
+bahasa inggris dan definisinya, tidak mungkin untuk menulis semua kata dalam 
+waktu yang singkat, untungnya Firmansyah pada halaman blognya ia telah 
+mempunyai database kamus bahasa inggris yang menurut saya sudah termasuk 
+lengkap (sekitar 23000 kata dan definisi). Lalu saya menanyakan bagaimana 
+lisensi file miliknya itu, apakah tidak ada batasan untuk modifikasi dan 
+distribusi ulang? Firmansyah menjawab dan memperbolehkan saya untuk 
+menggunakan file-nya di aplikasi saya. Kemudian Firmansyah mengirimkan saya 
+aplikasi GUI untuk kamusnya yang ia tulis dengan PHP-GTK, saya pun mulai 
+menggunakan aplikasi itu di sistem saya. Namun kecepatan aplikasi itu masih 
+lambat, walaupun dengan perubahan sana-sini aplikasi itu masih berjalan 
+lambat. Saya akhirnya memutuskan untuk menulis GUI yang baru, yang cepat, 
+dan bisa berjalan dimana saja (tanpa interpreter), lalu membuat editor untuk 
+modifikasi kamus.
 
-================================================================================
-FORMAT KAMUS
+Untuk membuat gKamus bisa digunakan di sistem operasi mana saja, gKamus 
+harus ditulis dengan bahasa yang bisa berjalan di mana saja, dalam hal ini 
+C dan GTK+. Pertama, C adalah bahasa semua sistem operasi, cepat dan sangat 
+portable. Kedua, GTK+ saat ini sudah di implementasikan di banyak sistem 
+operasi. Ketiga, mereka bebas, bukan gratis, tidak perduli dengan gratis 
+atau tidak, yang penting library mereka tidak ada pembatasan sana-sini untuk 
+distribusi ulang. Oke, cukup ngomongnya! 
 
-        gKamus menggunakan format text UNIX <LF> ASCII sebagai format kamus-nya.
-    Format file kamus gKamus adalah sebagai berikut:
+# FORMAT KAMUS
 
-        <kata> <tab> <definisi> [baris baru]
+    gKamus menggunakan format text UNIX <LF> ASCII sebagai format kamus-nya.
+Format file kamus gKamus adalah sebagai berikut:
 
-        Contoh:
+    <kata> <tab> <definisi> [baris baru]
 
-        kernel <tab> biji, inti, inti dari sistem operasi komputer [baris baru]
+    Contoh:
 
-        Atau dalam format string C:
+    kernel <tab> biji, inti, inti dari sistem operasi komputer [baris baru]
 
-        kernel\tbiji, inti, inti dari sistem operasi komputer\n
+    Atau dalam format string C:
 
-        Kata dan definisi dipisahkan dengan sebuah dan setiap baris kata 
-    dipisahkan dengan sebuah baris baru, kamus kemudian di sortir menurut abjad.
-    Misalkan:
+    kernel\tbiji, inti, inti dari sistem operasi komputer\n
 
-        a
-        aback
-        abaft
-        abalone
-        ...
+    Kata dan definisi dipisahkan dengan sebuah dan setiap baris kata 
+dipisahkan dengan sebuah baris baru, kamus kemudian di sortir menurut abjad.
+Misalkan:
 
-    Penggunaan format text pada gKamus adalah sebagai berikut:
+    a
+    aback
+    abaft
+    abalone
+    ...
 
-    * Format text itu simple, sehingga siapa saja bisa menggunakannya, tidak
-      seperti format biner yang tertutup dan tidak bisa langsung saja digunakan
-      (jika kita ingin merubahnya ke format lain)
+Penggunaan format text pada gKamus adalah sebagai berikut:
 
-    * Ukuran file, teks mempunyai ukuran yang jauh lebih kecil jika
-      dibandingkan dengan biner.
+* Format text itu simple, sehingga siapa saja bisa menggunakannya, tidak
+  seperti format biner yang tertutup dan tidak bisa langsung saja digunakan
+  (jika kita ingin merubahnya ke format lain)
 
-    * Modifikasi mudah, dengan teks editor biasa.
+* Ukuran file, teks mempunyai ukuran yang jauh lebih kecil jika
+  dibandingkan dengan biner.
 
-    * Tidak seperti UNIX, Windows membedakan antara teks dan biner. Kode akan
-      lebih sederhana jika menggunakan teks.
+* Modifikasi mudah, dengan teks editor biasa.
 
-    Kekurangan format teks:
+* Tidak seperti UNIX, Windows membedakan antara teks dan biner. Kode akan
+  lebih sederhana jika menggunakan teks.
 
-    * Kecepatan baca teks tidak secepat biner, karena alokasi jumlah bytes data
-      biner tidak bisa diterapkan pada data teks sehingga pembacaan acak pada
-      data teks tidak dimungkinkan. Tapi dengan teknik yang baik, kita dapat
-      mengatasi hal ini.
+Kekurangan format teks:
 
-================================================================================
-INSTALASI
+* Kecepatan baca teks tidak secepat biner, karena alokasi jumlah bytes data
+  biner tidak bisa diterapkan pada data teks sehingga pembacaan acak pada
+  data teks tidak dimungkinkan. Tapi dengan teknik yang baik, kita dapat
+  mengatasi hal ini.
 
-        gKamus dibuat dengan menimbang portabilitas, artinya gKamus dapat 
-    dipakai dimana saja dengan mudah di sistem Linux (distro apa saja) atau 
-    Windows. gKamus akan selalu disertakan dengan standar instalasi dan 
-    kompilasi GNU (GNU Build Tools). Anda tentu tidak bisa melakukan instalasi 
-    di direktori standar dengan akses non-root jika berada di sistem lain, atau 
-    sistem tersebut tidak punya kompiler dan development library untuk 
-    kompilasi. Untuk itu gKamus dibuat versi portable-nya dalam bentuk biner 
-    untuk langsung digunakan dari harddisk atau memory flash.
+# INSTALASI
 
-    * Kompilasi di Linux
+    gKamus dibuat dengan menimbang portabilitas, artinya gKamus dapat 
+dipakai dimana saja dengan mudah di sistem Linux (distro apa saja) atau 
+Windows. gKamus akan selalu disertakan dengan standar instalasi dan 
+kompilasi GNU (GNU Build Tools). Anda tentu tidak bisa melakukan instalasi 
+di direktori standar dengan akses non-root jika berada di sistem lain, atau 
+sistem tersebut tidak punya kompiler dan development library untuk 
+kompilasi. Untuk itu gKamus dibuat versi portable-nya dalam bentuk biner 
+untuk langsung digunakan dari harddisk atau memory flash.
 
-    Untuk kompilasi gKamus di Linux diperlukan development library sebagai 
-    berikut:
+* Kompilasi di Linux
 
-    - GTK+ >= 2.12.8
+Untuk kompilasi gKamus di Linux diperlukan development library sebagai 
+berikut:
 
-    Lakukan pengecekan library ini dengan pkg-config:
+- GTK+ >= 2.12.8
 
-    #pkg-config --modversion gtk+-2.0
+Lakukan pengecekan library ini dengan pkg-config:
 
-    Jika pkg-config tidak menemukan library ini, install terlebih dahulu dengan
-    installer distro Linux anda atau menggunakan online installer dari server
-    repository distro anda, contoh kompilasi gKamus:
+```bash
+#pkg-config --modversion gtk+-2.0
+```
 
-    #tar -xzvf gkamus-x.y.tar.gz #x.y adalah versi dari gkamus
-    #cd gkamus-x.y
-    #./configure
-    #make
-    #make install
+Jika pkg-config tidak menemukan library ini, install terlebih dahulu dengan
+installer distro Linux anda atau menggunakan online installer dari server
+repository distro anda, contoh kompilasi gKamus:
 
-    Anda juga dapat menentukan lokasi instalasi dengan:
+```bash
+#tar -xzvf gkamus-x.y.tar.gz #x.y adalah versi dari gkamus
+#cd gkamus-x.y
+#./configure
+#make
+#make install
+```
 
-    #./configure --prefix=/home/user/gkamus
-    
-    Ini akan membuat gKamus di install pada direktori $HOME user.
+Anda juga dapat menentukan lokasi instalasi dengan:
 
-    Agar file kamus bisa ditulis, set permisi file-file kamus agar bisa ditulis 
-    oleh user lain seperti berikut:
+```bash
+#./configure --prefix=/home/user/gkamus
+```
 
-    #cd /usr/local/share/gkamus #direktori standar gkamus, rubah sesuai direktori anda
-    #chmod 666 gkamus-en.dict gkamus-id.dict
+Ini akan membuat gKamus di install pada direktori $HOME user.
 
-    Untuk informasi lebih lanjut, lihat file INSTALL. Setelah kompilasi dan 
-    instalasi berhasil anda dapat menjalankan gKamus dari menu atau dari shell.
+Agar file kamus bisa ditulis, set permisi file-file kamus agar bisa ditulis 
+oleh user lain seperti berikut:
 
-    * Kompilasi di Windows
+```bash
+#cd /usr/local/share/gkamus #direktori standar gkamus, rubah sesuai direktori anda
+#chmod 666 gkamus-en.dict gkamus-id.dict
+```
 
-    Untuk kompilasi di Windows, anda memerlukan:
+Untuk informasi lebih lanjut, lihat file INSTALL. Setelah kompilasi dan 
+instalasi berhasil anda dapat menjalankan gKamus dari menu atau dari shell.
 
-    - GCC versi Windows:
-        - Mingw <http://www.mingw.org> atau,
-        - Cygwin <http://www.cygwin.org>
-    - GTK+ development versi Windows <http://www.gtk.org>
+* Kompilasi di Windows
 
-    Anda bisa mengambil file Makefile.win untuk kompilasi dengan Dev-C++ IDE di
-    source code gKamus untuk Windows.
+Untuk kompilasi di Windows, anda memerlukan:
 
-    Catatan: gKamus belum pernah dikompilasi di compiler lain seperti Microsoft
-    Visual C++ (MSVC) dan lain-lain. Penulis tidak memiliki keinginan untuk 
-    melakukan kompilasi di compiler-compiler tersebut, tapi anda bisa 
-    mencobanya dengan melihat manual GTK+ tentang cross compiler.
+- GCC versi Windows:
+    - Mingw <http://www.mingw.org> atau,
+    - Cygwin <http://www.cygwin.org>
+- GTK+ development versi Windows <http://www.gtk.org>
 
-================================================================================
-LISENSI
+Anda bisa mengambil file Makefile.win untuk kompilasi dengan Dev-C++ IDE di
+source code gKamus untuk Windows.
 
-    * Modifikasi, salin ulang, dan distribusi ulang gKamus dan gKamus editor
-      diperbolehkan sesuai dengan GNU Public License (GPL) versi 2, lihat
-      file COPYING
+Catatan: gKamus belum pernah dikompilasi di compiler lain seperti Microsoft
+Visual C++ (MSVC) dan lain-lain. Penulis tidak memiliki keinginan untuk 
+melakukan kompilasi di compiler-compiler tersebut, tapi anda bisa 
+mencobanya dengan melihat manual GTK+ tentang cross compiler.
 
-    * File kamus gKamus memakai database kamus yang aslinya dibuat oleh
-      Firmansyah <leonard_gimsong@yahoo.com>, yang kemudian dijadikan format
-      teks. Dia telah menyetujui database kamusnya untuk digunakan, bisa di
-      distribusi ulang, dan di modifikasi ulang (keep rock'n you guy!)
+# LISENSI
 
-================================================================================
-PERUBAHAN
+* Modifikasi, salin ulang, dan distribusi ulang gKamus dan gKamus editor
+  diperbolehkan sesuai dengan GNU Public License (GPL) versi 2, lihat
+  file COPYING
 
-    Lihat file ChangeLog
+* File kamus gKamus memakai database kamus yang aslinya dibuat oleh
+  Firmansyah <leonard_gimsong@yahoo.com>, yang kemudian dijadikan format
+  teks. Dia telah menyetujui database kamusnya untuk digunakan, bisa di
+  distribusi ulang, dan di modifikasi ulang (keep rock'n you guy!)
 
-================================================================================
-TIP
+# PERUBAHAN
 
-        Meskipun file kamus gKamus bisa dimodifikasi dengan teks editor biasa
-    (UNIX <LF> format) selalu gunakan gKamus untuk mengedit kamus, ini untuk
-    menjaga integritas data kamus
+Lihat file [ChangeLog](Changelog)
 
-================================================================================
-PENULIS
+# TIP
 
-        Lihat file AUTHORS
+    Meskipun file kamus gKamus bisa dimodifikasi dengan teks editor biasa
+(UNIX <LF> format) selalu gunakan gKamus untuk mengedit kamus, ini untuk
+menjaga integritas data kamus
+
+# PENULIS
+
+Lihat file [AUTHORS](AUTHORS)
