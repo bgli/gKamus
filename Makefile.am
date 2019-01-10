@@ -4,7 +4,7 @@ SUBDIRS = src data pixmaps
 
 gkamusdocdir = ${prefix}/doc/gkamus
 gkamusdoc_DATA = \
-        README \
+        README.md \
         COPYING \
         AUTHORS \
         ChangeLog \

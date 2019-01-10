@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+language: cpp
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt-get -y install libgtk2.0-dev
+
+script:
+  - ./configure
+  - make
