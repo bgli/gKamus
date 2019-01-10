@@ -17,16 +17,17 @@ script:
   - chmod +x appimagetool-x86_64.AppImage
   - mv ./app/bin/gkamus ./app/AppRun
   - mv ./app/share/pixmaps/gkamus.png ./app
-  - cat > ./app/gkamus.desktop <<EOF
-[Desktop Entry]
-Version=1.0
-Name=gKamus
-Comment=Simple English - Indonesian dictionary
-Exec=./AppRun
-Icon=gkamus
-Type=Application
-Categories=Utility;
-StartupNotify=true
-Terminal=false
-EOF
+  - |
+    cat > ./app/gkamus.desktop <<EOF
+    [Desktop Entry]
+    Version=1.0
+    Name=gKamus
+    Comment=Simple English - Indonesian dictionary
+    Exec=./AppRun
+    Icon=gkamus
+    Type=Application
+    Categories=Utility;
+    StartupNotify=true
+    Terminal=false
+    EOF
   - ARCH=x86_64 ./appimagetool-x86_64.AppImage app
