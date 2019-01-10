@@ -11,7 +11,7 @@ http://gkamus.sourceforge.net
 
 ## TENTANG GKAMUS
 
-    gKamus adalah program sederhana Kamus Bahasa Inggris - Indonesia, 
+gKamus adalah program sederhana Kamus Bahasa Inggris - Indonesia, 
 dibuat karena rasa frutrasi saya dengan membuka-buka kamus edisi cetakan 
 setiap kali membaca artikel, ebook, atau dokumen lainnya. Program kamus ada 
 berapa yang tersedia seperti Gidic di Linux, atau program komersial Linguist 
@@ -23,7 +23,7 @@ menggunakan format biner versi mereka sendiri untuk kamusnya yang tidak
 dapat dimodifikasi begitu saja, Anda memerlukan paling tidak semacam 
 Hex Editor.
 
-    Lalu bagaimana dengan pengguna biasa?, yang tidak mengerti dengan bahasa 
+Lalu bagaimana dengan pengguna biasa?, yang tidak mengerti dengan bahasa 
 pemrograman, bilangan hex atau biner? mereka tentu "tidak bisa" melakukan 
 perubahan. Tidak ada gunanya membuat program yang bebas jika hanya 
 Anda (penulis) yang dapat merubahnya. Kemudian saya menulis versi program 
@@ -55,7 +55,7 @@ distribusi ulang. Oke, cukup ngomongnya!
 
 # FORMAT KAMUS
 
-    gKamus menggunakan format text UNIX <LF> ASCII sebagai format kamus-nya.
+gKamus menggunakan format text UNIX <LF> ASCII sebagai format kamus-nya.
 Format file kamus gKamus adalah sebagai berikut:
 
     <kata> <tab> <definisi> [baris baru]
@@ -68,7 +68,7 @@ Format file kamus gKamus adalah sebagai berikut:
 
     kernel\tbiji, inti, inti dari sistem operasi komputer\n
 
-    Kata dan definisi dipisahkan dengan sebuah dan setiap baris kata 
+Kata dan definisi dipisahkan dengan sebuah dan setiap baris kata 
 dipisahkan dengan sebuah baris baru, kamus kemudian di sortir menurut abjad.
 Misalkan:
 
@@ -101,7 +101,7 @@ Kekurangan format teks:
 
 # INSTALASI
 
-    gKamus dibuat dengan menimbang portabilitas, artinya gKamus dapat 
+gKamus dibuat dengan menimbang portabilitas, artinya gKamus dapat 
 dipakai dimana saja dengan mudah di sistem Linux (distro apa saja) atau 
 Windows. gKamus akan selalu disertakan dengan standar instalasi dan 
 kompilasi GNU (GNU Build Tools). Anda tentu tidak bisa melakukan instalasi 
@@ -188,7 +188,7 @@ Lihat file [ChangeLog](Changelog)
 
 # TIP
 
-    Meskipun file kamus gKamus bisa dimodifikasi dengan teks editor biasa
+Meskipun file kamus gKamus bisa dimodifikasi dengan teks editor biasa
 (UNIX <LF> format) selalu gunakan gKamus untuk mengedit kamus, ini untuk
 menjaga integritas data kamus
 
